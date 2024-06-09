@@ -71,3 +71,32 @@ document.addEventListener("DOMContentLoaded", function () {
         };
         return panelMapping[sourceKey] !== undefined ? panelMapping[sourceKey] : -1;
     }
+
+     // Function to render the chart
+     function renderChart(panelData) {
+        const ctx = document.getElementById('energyChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: panelData.map((_, index) => `Panel ${index + 1}`),
+                datasets: [{
+                    label: 'Üretilen Enerji (kWh)',
+                    data: panelData.map(data => data.reduce((a, b) => a + b, 0)),
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    }
+
+    fetchTemperature();
+    fetchPanelData();
+});
