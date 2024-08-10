@@ -1,3 +1,4 @@
 # Task
 ## Project Not
-Mersin Üniversitesi Teknopark || günlük üretimi göstermek ve güneş panellerinden elektrik enerjisi üretimiyle ilgili bilgilerin olduğu tek sayfalık bir web sayfası.
+
+Mersin University Technopark || A single-page web application displaying daily production and information related to electricity production from solar panels.
