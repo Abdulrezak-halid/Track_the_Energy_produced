@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-# Task
-## Project Not
-
-A single-page web application displaying daily production and information related to electricity production from solar panels.
-=======
 # Solar Energy Monitor - Mersin University Technopark
 
 A modern, responsive web application for tracking solar panel energy production at Mersin University Technopark.
@@ -33,28 +27,6 @@ This single-page application displays real-time weather conditions and solar pan
 - **Chart.js**: Data visualization
 - **Font Awesome**: Icon library
 - **Google Fonts**: Poppins font family
-
-## 📁 Project Structure
-
-```
-A Arti-Mühendislik_Task/
-├── index.html                 # Main HTML file
-├── assets/
-│   ├── css/
-│   │   └── style.css         # Main stylesheet
-│   ├── js/
-│   │   ├── main.js           # Application initialization
-│   │   ├── weather.js        # Weather module
-│   │   ├── panelData.js      # Panel data module
-│   │   └── chart.js          # Chart rendering module
-│   └── data/
-│       └── Plant_1_Generation_Data.csv  # Solar panel data
-├── config/
-│   ├── config.js             # Configuration file (gitignored)
-│   └── config.example.js     # Example configuration
-├── .gitignore                # Git ignore file
-└── README.md                 # This file
-```
 
 ## 🔧 Installation & Setup
 
@@ -107,7 +79,7 @@ A Arti-Mühendislik_Task/
    http://localhost:8000
    ```
 
-## 🔐 Security Notes
+## Security Notes
 
 ### API Key Protection
 
@@ -146,21 +118,6 @@ app.listen(3000);
 The solar panel production data is sourced from:
 - [Kaggle: Solar Power Generation Data](https://www.kaggle.com/datasets/anikannal/solar-power-generation-data)
 
-## 🎨 Customization
-
-### Changing Colors
-
-Edit the CSS variables in `assets/css/style.css`:
-
-```css
-:root {
-    --primary-color: #3498db;
-    --secondary-color: #2ecc71;
-    --accent-color: #f39c12;
-    /* ... more colors ... */
-}
-```
-
 ### Changing City
 
 Edit the city name in `config/config.js`:
@@ -184,15 +141,7 @@ panels: {
 }
 ```
 
-## 📱 Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Opera (latest)
-
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Weather data not loading
 - Check your API key in `config/config.js`
@@ -222,15 +171,4 @@ To enable automatic data refresh every 5 minutes, uncomment the following line i
 
 This project is licensed under the MIT License.
 
-## 👥 Contributors
-
-- Mersin University Technopark Team
-
-## 📞 Contact
-
-For questions or support, please contact the Mersin University Technopark administration.
-
----
-
 **© 2026 Mersin University Technopark. All rights reserved.**
->>>>>>> master
