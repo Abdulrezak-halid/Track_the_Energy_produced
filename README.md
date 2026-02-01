@@ -5,11 +5,11 @@ A modern, responsive web application for tracking solar panel energy production 
 ![Solar Energy Monitor](https://img.shields.io/badge/Version-2.0-blue.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 
-## 📋 Overview
+## Overview
 
 This single-page application displays real-time weather conditions and solar panel energy production data. The system tracks 6 solar panels and provides comprehensive visualizations of their daily energy output.
 
-## ✨ Features
+## Features
 
 - **Real-time Weather Data**: Displays current temperature, humidity, wind speed, and cloud coverage for Mersin
 - **Energy Production Tracking**: Monitors 6 individual solar panels
@@ -18,17 +18,7 @@ This single-page application displays real-time weather conditions and solar pan
 - **Modern UI**: Clean, professional interface with smooth animations
 - **Modular Architecture**: Well-organized code structure for easy maintenance
 
-## 🚀 Technologies Used
-
-- **HTML5**: Semantic markup
-- **CSS3**: Modern styling with CSS Grid and Flexbox
-- **JavaScript (ES6+)**: Modular programming with async/await
-- **Bootstrap 5**: Responsive grid system
-- **Chart.js**: Data visualization
-- **Font Awesome**: Icon library
-- **Google Fonts**: Poppins font family
-
-## 🔧 Installation & Setup
+## Installation & Setup
 
 ### Prerequisites
 
@@ -79,41 +69,7 @@ This single-page application displays real-time weather conditions and solar pan
    http://localhost:8000
    ```
 
-## Security Notes
-
-### API Key Protection
-
-The API key is stored in `config/config.js` which is **excluded from version control** via `.gitignore`. 
-
-**Important Security Recommendations:**
-
-1. **Never commit the `config/config.js` file** to version control
-2. **For production deployment**, consider using:
-   - Environment variables
-   - Backend proxy server to hide API keys
-   - Server-side API calls
-   - API gateway services
-
-### Example Backend Proxy (Node.js)
-
-```javascript
-// server.js
-const express = require('express');
-const fetch = require('node-fetch');
-const app = express();
-
-app.get('/api/weather', async (req, res) => {
-    const response = await fetch('https://api.api-ninjas.com/v1/weather?city=Mersin', {
-        headers: { 'X-Api-Key': process.env.WEATHER_API_KEY }
-    });
-    const data = await response.json();
-    res.json(data);
-});
-
-app.listen(3000);
-```
-
-## 📊 Data Source
+## Data Source
 
 The solar panel production data is sourced from:
 - [Kaggle: Solar Power Generation Data](https://www.kaggle.com/datasets/anikannal/solar-power-generation-data)
@@ -159,7 +115,7 @@ panels: {
 - Check panel data is being fetched correctly
 - Ensure canvas element exists in HTML
 
-## 🔄 Auto-Refresh Feature
+## Auto-Refresh Feature
 
 To enable automatic data refresh every 5 minutes, uncomment the following line in `assets/js/main.js`:
 
@@ -167,7 +123,7 @@ To enable automatic data refresh every 5 minutes, uncomment the following line i
 // setupAutoRefresh();  // Remove the comment
 ```
 
-## 📝 License
+## License
 
 This project is licensed under the MIT License.
 
