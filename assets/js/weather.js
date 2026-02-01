@@ -1,14 +1,7 @@
-/**
- * Weather Module
- * Handles fetching and displaying weather data
- */
-
 const WeatherModule = (() => {
   let weatherData = null;
 
-  /**
-   * Fetch weather data from API
-   */
+  // Fetch weather data from API
   async function fetchWeather() {
     try {
       const response = await fetch(

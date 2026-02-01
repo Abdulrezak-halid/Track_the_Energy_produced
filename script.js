@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 document.addEventListener("DOMContentLoaded", function () {
     const weatherApiKey = 'txJxczB798Mj2mW0Zsd4RQ==3bah5Kwo7JkALuhb'; // API 
     const weatherApiUrl = `https://api.api-ninjas.com/v1/weather?city=Mersin`;
@@ -101,7 +100,6 @@ document.addEventListener("DOMContentLoaded", function () {
     fetchTemperature();
     fetchPanelData();
 });
-=======
 document.addEventListener("DOMContentLoaded", function () {
   const weatherApiKey = "txJxczB798Mj2mW0Zsd4RQ==3bah5Kwo7JkALuhb"; // API
   const weatherApiUrl = `https://api.api-ninjas.com/v1/weather?city=Mersin`;
@@ -210,4 +208,3 @@ document.addEventListener("DOMContentLoaded", function () {
   fetchTemperature();
   fetchPanelData();
 });
->>>>>>> master
