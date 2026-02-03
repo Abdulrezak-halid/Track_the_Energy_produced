@@ -11,12 +11,21 @@ This single-page application displays real-time weather conditions and solar pan
 
 ## Features
 
-- **Real-time Weather Data**: Displays current temperature, humidity, wind speed, and cloud coverage for Mersin
-- **Energy Production Tracking**: Monitors 6 individual solar panels
-- **Interactive Charts**: Visual representation of energy production using Chart.js
-- **Responsive Design**: Fully responsive layout that works on desktop, tablet, and mobile devices
-- **Modern UI**: Clean, professional interface with smooth animations
-- **Modular Architecture**: Well-organized code structure for easy maintenance
+**Current Weather Conditions**
+
+<img width="1202" height="720" alt="Screenshot from 2026-02-03 21-32-15" src="https://github.com/user-attachments/assets/e5d349cb-d08d-4cb3-8485-c74bc42061e6" />
+
+---
+
+**Energy Production by Panel**
+
+<img width="1207" height="577" alt="Screenshot from 2026-02-03 21-32-25" src="https://github.com/user-attachments/assets/75ad44f6-2e87-40ee-a13a-a1f236710b50" />
+
+---
+
+**Panel Production Details**
+
+<img width="1202" height="681" alt="Screenshot from 2026-02-03 21-32-34" src="https://github.com/user-attachments/assets/7cd18b9e-6d9c-4eaf-8e55-de98d8092307" />
 
 ## Installation & Setup
 
