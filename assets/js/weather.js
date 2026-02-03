@@ -4,23 +4,34 @@ const WeatherModule = (() => {
   // Fetch weather data from API
   async function fetchWeather() {
     try {
-      const response = await fetch(
-        `${CONFIG.weather.apiUrl}?city=${CONFIG.weather.city}`,
-        {
-          headers: { "X-Api-Key": CONFIG.weather.apiKey },
-        },
-      );
+      const url = `${CONFIG.weather.apiUrl}?lat=${CONFIG.weather.lat}&lon=${CONFIG.weather.lon}`;
+      console.log("Fetching weather from:", url);
+      console.log("Location:", CONFIG.weather.city, `(${CONFIG.weather.lat}, ${CONFIG.weather.lon})`);
+      console.log("Using API Key:", CONFIG.weather.apiKey ? "✓ Set" : "✗ Missing");
+      
+      const response = await fetch(url, {
+        headers: { "X-Api-Key": CONFIG.weather.apiKey },
+      });
+
+      console.log("Response status:", response.status);
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        const errorText = await response.text();
+        console.error("API Error Response:", errorText);
+        throw new Error(`HTTP error! status: ${response.status} - ${errorText}`);
       }
 
       weatherData = await response.json();
+      console.log("Weather data received:", weatherData);
       displayWeather();
       return weatherData;
     } catch (error) {
       console.error("Error fetching weather data:", error);
-      displayWeatherError();
+      console.error("Error details:", {
+        message: error.message,
+        stack: error.stack
+      });
+      displayWeatherError(error);
       return null;
     }
   }
@@ -52,14 +63,16 @@ const WeatherModule = (() => {
     }
   }
 
-  function displayWeatherError() {
+  function displayWeatherError(error) {
     const tempElement = document.getElementById("temperature");
+    const errorMsg = error ? error.message : "Unknown error";
     tempElement.innerHTML = `
             <span class="error-message">
                 <i class="fas fa-exclamation-triangle"></i>
                 Unable to load weather data
             </span>
         `;
+    console.log("Check console for detailed error information");
   }
 
   function getWeatherData() {
